@@ -1,0 +1,235 @@
+[
+  {
+    "id": 0,
+    "text": "The housing market has shifted dramatically due to rising interest rates.",
+    "hash": "a1b2c3d4",
+    "paragraph_id": 0,
+    "classification": {
+      "biber": {
+        "informational": 0.8,
+        "involved": 0.1,
+        "narrative": 0.3,
+        "persuasive": 0.2,
+        "abstract": 0.4,
+        "elaborative": 0.2
+      },
+      "patterns": [{ "type": "nominalization", "confidence": 0.7, "evidence": "rising" }],
+      "metrics": {
+        "word_count": 11,
+        "clause_count": 1,
+        "has_participial": false,
+        "has_relative_clause": false,
+        "clause_balance_ratio": 0.5,
+        "construction_type": "simple"
+      },
+      "arc_role": "claim"
+    },
+    "heat": 0.4
+  },
+  {
+    "id": 1,
+    "text": "First-time buyers face increasingly difficult choices, while seasoned investors find new opportunities.",
+    "hash": "b2c3d4e5",
+    "paragraph_id": 0,
+    "classification": {
+      "biber": {
+        "informational": 0.6,
+        "involved": 0.2,
+        "narrative": 0.1,
+        "persuasive": 0.4,
+        "abstract": 0.3,
+        "elaborative": 0.3
+      },
+      "patterns": [
+        { "type": "binary_contrast", "confidence": 0.9, "evidence": "while" },
+        { "type": "clause_symmetry", "confidence": 0.8, "evidence": "balanced clauses" }
+      ],
+      "metrics": {
+        "word_count": 14,
+        "clause_count": 2,
+        "has_participial": false,
+        "has_relative_clause": false,
+        "clause_balance_ratio": 0.9,
+        "construction_type": "compound"
+      },
+      "arc_role": "evidence"
+    },
+    "heat": 3.2
+  },
+  {
+    "id": 2,
+    "text": "This transformation represents a fundamental shift in how Americans approach homeownership.",
+    "hash": "c3d4e5f6",
+    "paragraph_id": 0,
+    "classification": {
+      "biber": {
+        "informational": 0.7,
+        "involved": 0.1,
+        "narrative": 0.1,
+        "persuasive": 0.5,
+        "abstract": 0.6,
+        "elaborative": 0.2
+      },
+      "patterns": [
+        { "type": "nominalization", "confidence": 0.9, "evidence": "transformation" },
+        { "type": "importance_inflation", "confidence": 0.8, "evidence": "fundamental shift" },
+        { "type": "nominalization", "confidence": 0.7, "evidence": "homeownership" }
+      ],
+      "metrics": {
+        "word_count": 13,
+        "clause_count": 2,
+        "has_participial": false,
+        "has_relative_clause": false,
+        "clause_balance_ratio": 0.6,
+        "construction_type": "complex"
+      },
+      "arc_role": "resolution"
+    },
+    "heat": 4.1
+  },
+  {
+    "id": 3,
+    "text": "Moreover, the ripple effects extend far beyond the immediate market.",
+    "hash": "d4e5f6g7",
+    "paragraph_id": 1,
+    "classification": {
+      "biber": {
+        "informational": 0.6,
+        "involved": 0.1,
+        "narrative": 0.1,
+        "persuasive": 0.4,
+        "abstract": 0.5,
+        "elaborative": 0.4
+      },
+      "patterns": [
+        { "type": "transition_formulaic", "confidence": 0.95, "evidence": "Moreover" },
+        { "type": "importance_inflation", "confidence": 0.6, "evidence": "far beyond" }
+      ],
+      "metrics": {
+        "word_count": 11,
+        "clause_count": 1,
+        "has_participial": false,
+        "has_relative_clause": false,
+        "clause_balance_ratio": 0.5,
+        "construction_type": "simple"
+      },
+      "arc_role": "transition"
+    },
+    "heat": 3.4
+  },
+  {
+    "id": 4,
+    "text": "Construction companies, grappling with supply chain disruptions, have been forced to reconsider their strategies.",
+    "hash": "e5f6g7h8",
+    "paragraph_id": 1,
+    "classification": {
+      "biber": {
+        "informational": 0.7,
+        "involved": 0.1,
+        "narrative": 0.4,
+        "persuasive": 0.2,
+        "abstract": 0.3,
+        "elaborative": 0.5
+      },
+      "patterns": [
+        { "type": "participial_cascade", "confidence": 0.85, "evidence": "grappling with" },
+        { "type": "nominalization", "confidence": 0.6, "evidence": "disruptions" }
+      ],
+      "metrics": {
+        "word_count": 15,
+        "clause_count": 3,
+        "has_participial": true,
+        "has_relative_clause": false,
+        "clause_balance_ratio": 0.4,
+        "construction_type": "complex"
+      },
+      "arc_role": "evidence"
+    },
+    "heat": 3.8
+  },
+  {
+    "id": 5,
+    "text": "While some regions experience growth, others face stagnation, creating a deeply uneven landscape across the nation.",
+    "hash": "f6g7h8i9",
+    "paragraph_id": 1,
+    "classification": {
+      "biber": {
+        "informational": 0.5,
+        "involved": 0.1,
+        "narrative": 0.2,
+        "persuasive": 0.5,
+        "abstract": 0.4,
+        "elaborative": 0.4
+      },
+      "patterns": [
+        { "type": "binary_contrast", "confidence": 0.9, "evidence": "While some... others" },
+        { "type": "participial_cascade", "confidence": 0.7, "evidence": "creating" },
+        { "type": "importance_inflation", "confidence": 0.5, "evidence": "deeply uneven landscape" }
+      ],
+      "metrics": {
+        "word_count": 18,
+        "clause_count": 3,
+        "has_participial": true,
+        "has_relative_clause": false,
+        "clause_balance_ratio": 0.7,
+        "construction_type": "compound-complex"
+      },
+      "arc_role": "resolution"
+    },
+    "heat": 5.2
+  },
+  {
+    "id": 6,
+    "text": "The cat sat on the mat.",
+    "hash": "g7h8i9j0",
+    "paragraph_id": 2,
+    "classification": {
+      "biber": {
+        "informational": 0.3,
+        "involved": 0.1,
+        "narrative": 0.8,
+        "persuasive": 0,
+        "abstract": 0,
+        "elaborative": 0.1
+      },
+      "patterns": [],
+      "metrics": {
+        "word_count": 7,
+        "clause_count": 1,
+        "has_participial": false,
+        "has_relative_clause": false,
+        "clause_balance_ratio": 0.5,
+        "construction_type": "simple"
+      },
+      "arc_role": "claim"
+    },
+    "heat": 0
+  },
+  {
+    "id": 7,
+    "text": "It looked up.",
+    "hash": "h8i9j0k1",
+    "paragraph_id": 2,
+    "classification": {
+      "biber": {
+        "informational": 0.2,
+        "involved": 0.2,
+        "narrative": 0.7,
+        "persuasive": 0,
+        "abstract": 0,
+        "elaborative": 0
+      },
+      "patterns": [],
+      "metrics": {
+        "word_count": 3,
+        "clause_count": 1,
+        "has_participial": false,
+        "has_relative_clause": false,
+        "clause_balance_ratio": 0.5,
+        "construction_type": "simple"
+      },
+      "arc_role": "evidence"
+    },
+    "heat": 0
+  }
+]

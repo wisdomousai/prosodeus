@@ -1,0 +1,9 @@
+{
+  "name": "prosodeus",
+  "plugins": [
+    {
+      "name": "prosodeus",
+      "source": { "source": "local", "path": "./plugins/prosodeus" }
+    }
+  ]
+}

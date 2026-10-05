@@ -1,0 +1,142 @@
+[
+  {
+    "text": "The implementation of this framework represents a fundamental paradigm shift.",
+    "expected_patterns": ["nominalization", "importance_inflation"],
+    "notes": "'implementation' is a nominalization, 'fundamental paradigm shift' is inflation"
+  },
+  {
+    "text": "Moreover, the integration of these systems has opened up new avenues.",
+    "expected_patterns": ["transition_formulaic", "nominalization"],
+    "notes": "'Moreover' is a formulaic transition, 'integration' is a nominalization"
+  },
+  {
+    "text": "While traditional approaches relied on expertise, modern systems leverage data.",
+    "expected_patterns": ["binary_contrast"],
+    "notes": "'While X, Y' is a binary contrast"
+  },
+  {
+    "text": "The cat sat on the mat.",
+    "expected_patterns": [],
+    "notes": "Simple sentence with no LLM patterns"
+  },
+  {
+    "text": "Furthermore, the development of predictive models has shown considerable promise.",
+    "expected_patterns": ["transition_formulaic", "nominalization", "hedging"],
+    "notes": "'Furthermore' formulaic, 'development' nominalization, 'considerable' hedging"
+  },
+  {
+    "text": "It is important to note that this technology offers tremendous potential.",
+    "expected_patterns": ["importance_inflation", "hedging"],
+    "notes": "'important' inflation, 'tremendous potential' inflation"
+  },
+  {
+    "text": "She ran fast.",
+    "expected_patterns": [],
+    "notes": "Minimal sentence, no patterns"
+  },
+  {
+    "text": "This groundbreaking approach has the potential to revolutionize the entire landscape.",
+    "expected_patterns": ["importance_inflation", "llm_fingerprint_word"],
+    "notes": "'groundbreaking' inflation, 'landscape' LLM fingerprint word"
+  },
+  {
+    "text": "The system was implemented by the engineering team last quarter.",
+    "expected_patterns": ["agentless_passive"],
+    "notes": "Passive voice — though has agent, classifier may flag as passive"
+  },
+  {
+    "text": "Although the results were promising, the methodology had significant limitations.",
+    "expected_patterns": ["binary_contrast", "hedging"],
+    "notes": "'Although X, Y' is binary contrast, 'promising' and 'significant' are hedging"
+  },
+  {
+    "text": "Additionally, these sophisticated tools enable providers to identify patterns.",
+    "expected_patterns": ["transition_formulaic"],
+    "notes": "'Additionally' is a formulaic transition"
+  },
+  {
+    "text": "He walked to the store and bought milk.",
+    "expected_patterns": [],
+    "notes": "Simple compound sentence, no LLM patterns"
+  },
+  {
+    "text": "The multifaceted nature of this challenge requires a comprehensive approach.",
+    "expected_patterns": ["llm_fingerprint_word", "nominalization"],
+    "notes": "'multifaceted' LLM fingerprint, 'nature' nominalization-adjacent"
+  },
+  {
+    "text": "Perhaps the most crucial aspect of this analysis is its potential implications.",
+    "expected_patterns": ["hedging", "importance_inflation", "nominalization"],
+    "notes": "'Perhaps' hedging, 'crucial' inflation, 'analysis' and 'implications' nominalizations"
+  },
+  {
+    "text": "The rain poured down. Streets flooded within minutes.",
+    "expected_patterns": [],
+    "notes": "Concrete, vivid writing — no LLM patterns"
+  },
+  {
+    "text": "Whereas early models focused on accuracy, newer approaches prioritize interpretability.",
+    "expected_patterns": ["binary_contrast"],
+    "notes": "'Whereas X, Y' is a binary contrast"
+  },
+  {
+    "text": "It is widely recognized that the adoption of these methodologies is essential.",
+    "expected_patterns": ["agentless_passive", "hedging", "nominalization"],
+    "notes": "'It is widely recognized' agentless passive, 'adoption'/'methodologies' nominalizations"
+  },
+  {
+    "text": "The dog barked loudly at the mailman.",
+    "expected_patterns": [],
+    "notes": "Simple active sentence"
+  },
+  {
+    "text": "This pivotal development has far-reaching consequences for the field.",
+    "expected_patterns": ["importance_inflation", "nominalization"],
+    "notes": "'pivotal' inflation, 'development'/'consequences' nominalizations"
+  },
+  {
+    "text": "Let me delve into the tapestry of interconnected factors at play here.",
+    "expected_patterns": ["llm_fingerprint_word"],
+    "notes": "'delve' and 'tapestry' are both LLM fingerprint words"
+  },
+  {
+    "text": "Having established the theoretical framework, we now turn to empirical evidence.",
+    "expected_patterns": ["nominalization"],
+    "notes": "'framework' nominalization, participial opening is structural"
+  },
+  {
+    "text": "Somewhat surprisingly, the initial findings suggest a potentially different outcome.",
+    "expected_patterns": ["hedging"],
+    "notes": "'Somewhat', 'potentially' are hedging words"
+  },
+  {
+    "text": "Three things make this approach unique: scalability, reliability, and cost-effectiveness.",
+    "expected_patterns": ["tricolon_abstract"],
+    "notes": "Three abstract nouns in a tricolon"
+  },
+  {
+    "text": "The optimization of resource allocation is achieved through systematic evaluation.",
+    "expected_patterns": ["nominalization", "agentless_passive"],
+    "notes": "'optimization'/'allocation'/'evaluation' nominalizations, 'is achieved' passive"
+  },
+  {
+    "text": "I disagree. The evidence shows otherwise.",
+    "expected_patterns": [],
+    "notes": "Direct, personal voice — no LLM patterns"
+  },
+  {
+    "text": "In essence, this represents a nuanced understanding of the underlying dynamics.",
+    "expected_patterns": ["resumptive_phrase", "nominalization"],
+    "notes": "'In essence' is resumptive, 'understanding'/'dynamics' nominalizations"
+  },
+  {
+    "text": "The analysis was conducted using a mixed-methods approach that combined both qualitative and quantitative methodologies.",
+    "expected_patterns": ["agentless_passive", "nominalization", "binary_contrast"],
+    "notes": "'was conducted' passive, 'analysis' nominalization, 'both X and Y' binary"
+  },
+  {
+    "text": "Birds sang. Wind rustled leaves. Morning broke golden over the hills.",
+    "expected_patterns": [],
+    "notes": "Vivid, concrete prose — no LLM patterns"
+  }
+]

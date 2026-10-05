@@ -1,0 +1,81 @@
+{
+  "name": "@prosodeus/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/main.js",
+  "scripts": {
+    "rebuild:native": "electron-rebuild -f -w better-sqlite3",
+    "postinstall": "electron-rebuild -f -w better-sqlite3",
+    "dev": "bun run rebuild:native && bun build src/main.ts --target node --outfile dist/main.js --external electron --external bun:sqlite --external better-sqlite3 && bun build src/preload.ts --target node --format cjs --outfile dist/preload.cjs --external electron && electron .",
+    "dev:debug": "bun run rebuild:native && bun build src/main.ts --target node --outfile dist/main.js --external electron --external bun:sqlite --external better-sqlite3 && bun build src/preload.ts --target node --format cjs --outfile dist/preload.cjs --external electron && electron --remote-debugging-port=9222 .",
+    "build": "bun build src/main.ts --target node --outfile dist/main.js --external electron --external bun:sqlite --external better-sqlite3 && bun build src/preload.ts --target node --format cjs --outfile dist/preload.cjs --external electron",
+    "package": "bun run build && rm -rf renderer && cp -R ../app/dist renderer && electron-builder",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.10.0"
+  },
+  "devDependencies": {
+    "@electron/rebuild": "^4.0.4",
+    "@prosodeus/core": "workspace:*",
+    "@prosodeus/shared": "workspace:*",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/bun": "latest",
+    "@types/node": "^25.3.5",
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.prosodeus.desktop",
+    "productName": "Prosodeus",
+    "protocols": [
+      {
+        "name": "Prosodeus Analyze",
+        "schemes": [
+          "prosodeus"
+        ]
+      }
+    ],
+    "fileAssociations": [
+      {
+        "ext": "md",
+        "name": "Markdown",
+        "role": "Editor"
+      },
+      {
+        "ext": "txt",
+        "name": "Text",
+        "role": "Editor"
+      }
+    ],
+    "files": [
+      "dist/**/*",
+      "renderer/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ]
+    },
+    "asarUnpack": [
+      "**/*.node"
+    ],
+    "electronVersion": "33.4.11"
+  },
+  "license": "MIT",
+  "description": "Prosodeus desktop editor: find and rewrite generic, uniform prose",
+  "author": "Prosodeus contributors"
+}

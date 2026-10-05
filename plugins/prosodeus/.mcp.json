@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "prosodeus": {
+      "command": "npx",
+      "args": ["-y", "@prosodeus/mcp"]
+    }
+  }
+}

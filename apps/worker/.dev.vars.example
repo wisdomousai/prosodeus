@@ -1,0 +1,10 @@
+# Copy to .dev.vars (gitignored). Set only the providers you use.
+GROQ_API_KEY=
+MISTRAL_API_KEY=
+GOOGLE_API_KEY=
+MOONSHOT_API_KEY=
+# Cloudflare Workers AI
+AI_API_KEY=
+CLOUDFLARE_ACCOUNT_ID=
+# Optional: persist business tables in Postgres (run `bun run db:migrate` first)
+# DATABASE_URL=postgres://user:pass@localhost:5432/prosodeus

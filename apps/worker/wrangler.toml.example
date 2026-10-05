@@ -1,0 +1,39 @@
+name = "my-prosodeus-api"  # your worker name
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+[dev]
+port = 8788
+
+[placement]
+mode = "smart"
+
+# Postgres via Hyperdrive (works with any Postgres, e.g. Neon)
+[[hyperdrive]]
+binding = "HYPERDRIVE"
+id = "REPLACE_ME"  # wrangler hyperdrive create my-db --connection-string="postgres://..."
+
+# KV Namespace (global classification cache)
+[[kv_namespaces]]
+binding = "CACHE"
+id = "REPLACE_ME"  # wrangler kv namespace create CACHE
+
+# Durable Objects
+[durable_objects]
+bindings = [
+  { name = "DOCUMENT", class_name = "DocumentAnalyzer" }
+]
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["DocumentAnalyzer"]
+
+[vars]
+# Comma-separated origins allowed by CORS (your app origin)
+ALLOWED_ORIGINS = "http://localhost:5173"
+
+# Optional: serve from your own domain
+# routes = [
+#   { pattern = "api.example.com/*", zone_name = "example.com" }
+# ]

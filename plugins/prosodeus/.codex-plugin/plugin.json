@@ -1,0 +1,12 @@
+{
+  "name": "prosodeus",
+  "version": "0.1.0",
+  "description": "Find and rewrite generic, uniform, model-sounding prose. Scan, fix, and verify with your own LLM key.",
+  "keywords": ["writing", "editing", "prose", "style", "ai-slop"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Prosodeus",
+    "shortDescription": "Find and rewrite generic, uniform prose"
+  }
+}

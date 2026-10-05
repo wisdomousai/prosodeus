@@ -1,0 +1,302 @@
+@import "tailwindcss" source(none);
+@source "../index.html";
+@source "./";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Prosodeus editorial palette */
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-moss: var(--moss);
+  --color-amber: var(--amber);
+  --color-blood: var(--blood);
+  --color-ash: var(--ash);
+  --color-cream: var(--cream);
+
+  /* Heat tints (subtle — used as backgrounds behind underlines, not on paragraphs) */
+  --color-heat-1: var(--heat-1);
+  --color-heat-2: var(--heat-2);
+  --color-heat-3: var(--heat-3);
+
+  /* Legacy tokens (do not use in new surfaces) — kept for backward-compat in salvaged files */
+  --color-gold: #b88a2c;
+  --color-gold-dim: rgba(184, 138, 44, 0.12);
+  --color-gold-glow: rgba(184, 138, 44, 0.25);
+  --color-gold-bright: #c79a36;
+  --color-blood-dim: rgba(160, 65, 65, 0.18);
+  --color-blood-bright: #a04141;
+  --color-wine: #6b2fa0;
+  --color-wine-dim: rgba(107, 47, 160, 0.12);
+  --color-olive: #5e7a3f;
+  --color-olive-dim: rgba(94, 122, 63, 0.12);
+  --color-bronze: #b88a2c;
+  --color-bronze-dim: rgba(184, 138, 44, 0.16);
+  --color-sea: #2f4f78;
+  --color-sea-dim: rgba(47, 79, 120, 0.12);
+  --color-ash-dim: rgba(138, 128, 120, 0.12);
+  --color-marble: #f7f3eb;
+
+  --font-serif: 'Crimson Text', Georgia, 'Times New Roman', serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/*
+  Prosodeus editorial light theme.
+  Cool white tool surfaces, deep navy controls, and restrained diagnostic accents.
+  Density colors are reserved for underlines, chips, and margin markers.
+*/
+:root {
+  --background: #f6f8fb;
+  --foreground: #132032;
+  --card: #ffffff;
+  --card-foreground: #132032;
+  --popover: #ffffff;
+  --popover-foreground: #132032;
+  --primary: #073b63;
+  --primary-foreground: #ffffff;
+  --secondary: #edf2f7;
+  --secondary-foreground: #132032;
+  --muted: #eef3f7;
+  --muted-foreground: #687587;
+  --accent: #e6f1fb;
+  --accent-foreground: #10263d;
+  --destructive: #b6404a;
+  --destructive-foreground: #ffffff;
+  --border: #d9e2ec;
+  --input: #cfd9e5;
+  --ring: rgba(7, 59, 99, 0.32);
+  --radius: 0.5rem;
+
+  --chart-1: #2f4f78;
+  --chart-2: #5e7a3f;
+  --chart-3: #b88a2c;
+  --chart-4: #a04141;
+  --chart-5: #8a8078;
+
+  /* Sidebar — slightly cooler than main surface */
+  --sidebar: #061a2b;
+  --sidebar-foreground: #dce7f1;
+  --sidebar-primary: #0f5f9e;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e6f1fb;
+  --sidebar-accent-foreground: #10263d;
+  --sidebar-border: #12304a;
+  --sidebar-ring: rgba(8, 132, 190, 0.35);
+
+  /* Editorial accents */
+  --ink: #073b63;
+  --ink-soft: rgba(8, 132, 190, 0.11);
+  --moss: #23846f;
+  --amber: #b77b18;
+  --blood: #b6404a;
+  --ash: #687587;
+  --cream: #ffffff;
+
+  /* Heat scale — subtle underline/badge tints. Never used as paragraph backgrounds. */
+  --heat-1: rgba(94, 122, 63, 0.14);
+  --heat-2: rgba(184, 138, 44, 0.18);
+  --heat-3: rgba(160, 65, 65, 0.2);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.tiptap-document {
+  padding: 16px 0 56px;
+}
+
+.tiptap-document .ProseMirror {
+  max-width: 850px;
+  min-height: calc(100vh - 210px);
+  margin: 0 auto;
+  padding: 48px 62px 64px;
+  background: #ffffff;
+  color: #101827;
+}
+
+.tiptap-document .ProseMirror p {
+  margin: 0 0 1.05rem;
+}
+
+.tiptap-document .ProseMirror h1,
+.tiptap-document .ProseMirror h2,
+.tiptap-document .ProseMirror h3 {
+  font-family: var(--font-display);
+  line-height: 1.12;
+  margin: 1.1em 0 0.45em;
+}
+
+.tiptap-document .ProseMirror:focus {
+  outline: 2px solid rgba(8, 132, 190, 0.16);
+  outline-offset: 2px;
+}
+
+@media (max-width: 767px) {
+  .tiptap-document {
+    padding: 24px 16px 64px;
+  }
+
+  .tiptap-document .ProseMirror {
+    width: 100%;
+    max-width: none;
+    min-height: calc(100vh - 190px);
+    padding: 36px 28px 52px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tiptap-document {
+    padding: 20px 12px 64px;
+  }
+
+  .tiptap-document .ProseMirror {
+    padding: 32px 22px 48px;
+  }
+}
+
+/* Editor prose uses the serif stack; UI chrome stays in sans. */
+.prose-editor {
+  font-family: var(--font-serif);
+  line-height: 1.7;
+}
+
+.ProseMirror {
+  min-height: calc(100svh - 8rem);
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 3rem 4rem 8rem;
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
+  line-height: 1.9;
+  color: var(--foreground);
+  outline: none;
+}
+
+.ProseMirror p {
+  margin: 0 0 1.15rem;
+}
+
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3 {
+  font-family: var(--font-display);
+  line-height: 1.12;
+  margin: 1.6rem 0 0.8rem;
+}
+
+.ProseMirror h1 {
+  font-size: 2rem;
+}
+.ProseMirror h2 {
+  font-size: 1.55rem;
+}
+.ProseMirror h3 {
+  font-size: 1.25rem;
+}
+
+.ProseMirror blockquote {
+  border-left: 3px solid var(--border);
+  margin: 1.25rem 0;
+  padding-left: 1rem;
+  color: var(--muted-foreground);
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+  margin: 0 0 1rem 1.5rem;
+}
+
+@media (max-width: 767px) {
+  .ProseMirror {
+    padding: 2rem 1.25rem 6rem;
+    font-size: 1rem;
+  }
+}
+
+/* Document titles + section headings */
+.font-editorial {
+  font-family: var(--font-display);
+  letter-spacing: -0.005em;
+}
+
+/* Taxonomy IDs, constraint-prompt previews, small labels */
+.font-mono-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

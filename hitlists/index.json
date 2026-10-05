@@ -1,0 +1,122 @@
+[
+  {
+    "slug": "academic-polish-markers",
+    "category": "Academic polish markers",
+    "entries": 103,
+    "tiers": {
+      "strong": 18,
+      "moderate": 47,
+      "watch": 38
+    }
+  },
+  {
+    "slug": "boilerplate-conclusions-persona",
+    "category": "Boilerplate, empty conclusions and persona flattening",
+    "entries": 88,
+    "tiers": {
+      "strong": 24,
+      "moderate": 49,
+      "watch": 15
+    }
+  },
+  {
+    "slug": "corporate-gloss-strategy-vapor",
+    "category": "Corporate gloss and strategy vapor",
+    "entries": 93,
+    "tiers": {
+      "strong": 32,
+      "moderate": 53,
+      "watch": 8
+    }
+  },
+  {
+    "slug": "false-nuance-complexity-theater",
+    "category": "False nuance and complexity theater",
+    "entries": 78,
+    "tiers": {
+      "strong": 15,
+      "moderate": 46,
+      "watch": 17
+    }
+  },
+  {
+    "slug": "generic-framing-fog",
+    "category": "Generic framing fog",
+    "entries": 88,
+    "tiers": {
+      "strong": 12,
+      "moderate": 56,
+      "watch": 20
+    }
+  },
+  {
+    "slug": "hedging-sycophancy-voice-flattening",
+    "category": "Hedging, sycophancy and voice flattening",
+    "entries": 75,
+    "tiers": {
+      "strong": 30,
+      "moderate": 34,
+      "watch": 11
+    }
+  },
+  {
+    "slug": "llm-transition-grease",
+    "category": "LLM transition grease",
+    "entries": 78,
+    "tiers": {
+      "strong": 17,
+      "moderate": 40,
+      "watch": 21
+    }
+  },
+  {
+    "slug": "model-specific-markers",
+    "category": "Model-family specific markers",
+    "entries": 66,
+    "tiers": {
+      "strong": 17,
+      "moderate": 34,
+      "watch": 15
+    }
+  },
+  {
+    "slug": "motivational-uplift-residue",
+    "category": "Motivational uplift residue",
+    "entries": 67,
+    "tiers": {
+      "strong": 27,
+      "moderate": 31,
+      "watch": 9
+    }
+  },
+  {
+    "slug": "seo-slop-fragments",
+    "category": "SEO slop and content-farm fragments",
+    "entries": 78,
+    "tiers": {
+      "strong": 31,
+      "moderate": 42,
+      "watch": 5
+    }
+  },
+  {
+    "slug": "symmetrical-sentence-templates",
+    "category": "Symmetrical sentence templates",
+    "entries": 98,
+    "tiers": {
+      "strong": 26,
+      "moderate": 61,
+      "watch": 11
+    }
+  },
+  {
+    "slug": "synthetic-significance-markers",
+    "category": "Synthetic significance markers",
+    "entries": 88,
+    "tiers": {
+      "strong": 34,
+      "moderate": 48,
+      "watch": 6
+    }
+  }
+]

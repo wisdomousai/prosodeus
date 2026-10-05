@@ -1,0 +1,9 @@
+{
+  "name": "prosodeus",
+  "version": "0.1.0",
+  "description": "Find and rewrite generic, uniform, model-sounding prose. Scan, fix, and verify with your own LLM key.",
+  "author": { "name": "Prosodeus contributors" },
+  "license": "MIT",
+  "repository": "https://github.com/wisdomousai/prosodeus",
+  "keywords": ["writing", "editing", "prose", "style", "ai-slop"]
+}

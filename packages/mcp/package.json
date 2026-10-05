@@ -1,0 +1,47 @@
+{
+  "name": "@prosodeus/mcp",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "bin": {
+    "prosodeus-mcp": "./dist/mcp-server.js"
+  },
+  "scripts": {
+    "build": "bun build src/index.ts src/mcp-server.ts --outdir dist --target node --external @anthropic-ai/claude-agent-sdk",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "@ai-sdk/groq": "^3.0.29",
+    "@ai-sdk/openai-compatible": "^2.0.35",
+    "ai": "^6.0.116",
+    "zod": "^4.3.6",
+    "@anthropic-ai/claude-agent-sdk": "^0.3.142"
+  },
+  "devDependencies": {
+    "@prosodeus/core": "workspace:*",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "description": "MCP server exposing Prosodeus prose analysis and rewrite tools.",
+  "main": "./dist/index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wisdomousai/prosodeus.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ]
+}

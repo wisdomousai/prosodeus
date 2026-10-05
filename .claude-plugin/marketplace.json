@@ -1,0 +1,11 @@
+{
+  "name": "prosodeus",
+  "owner": { "name": "Prosodeus contributors" },
+  "plugins": [
+    {
+      "name": "prosodeus",
+      "source": "./plugins/prosodeus",
+      "description": "Find and rewrite generic, uniform, model-sounding prose. Scan, fix, and verify with your own LLM key."
+    }
+  ]
+}
