@@ -240,18 +240,30 @@ def phrase_to_regex(phrase: str) -> list[tuple[str, str]]:
         # to bounded wildcards.
         placeholder_re = re.compile(r"\[[^\]]+\]")
         if placeholder_re.search(alt):
+            wildcard = r"[^\n\r]{0,40}?"
             parts = []
             last = 0
             for m in placeholder_re.finditer(alt):
                 literal = alt[last:m.start()]
                 if literal.strip():
                     parts.append(re.escape(literal.strip()))
-                parts.append(r"[^\n\r]{0,40}?")
+                parts.append(wildcard)
                 last = m.end()
             literal = alt[last:]
             if literal.strip():
                 parts.append(re.escape(literal.strip()))
-            results.append(("".join(parts), flags))
+            # A wildcard window at either end cannot change whether a sentence matches, only how
+            # much text the match spans, and it makes the engine retry up to 40 characters from
+            # every start position. Adjacent windows multiply that. Keep interior ones only.
+            collapsed = []
+            for part in parts:
+                if part == wildcard and (not collapsed or collapsed[-1] == wildcard):
+                    continue
+                collapsed.append(part)
+            while collapsed and collapsed[-1] == wildcard:
+                collapsed.pop()
+            if any(part != wildcard for part in collapsed):
+                results.append(("".join(collapsed), flags))
             continue
 
         words = alt.split()
@@ -636,6 +648,7 @@ def main():
         str(OUT_DIR / "llm-marker-patterns.ts"),
         str(OUT_DIR / "llm-marker-matchers.ts"),
         str(OUT_DIR / "llm-marker-enrichment.json"),
+        str(HITLIST_DIR),
     ]
     try:
         subprocess.run(["npx", "biome", "check", "--write"] + files_to_format, check=True)
