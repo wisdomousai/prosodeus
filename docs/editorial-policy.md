@@ -1,4 +1,4 @@
-# Editorial policy: diagnose prose, never accuse people
+# Editorial policy
 
 Prosodeus finds structural and lexical uniformity in text and helps you fix it. It does not, and cannot, tell you who or what wrote something. Please use it that way.
 
