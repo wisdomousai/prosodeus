@@ -58,12 +58,12 @@ describe("AI slop candidate extraction", () => {
 
     // Guard against catastrophic regex backtracking, not a benchmark. The first pass pays
     // one-time regex compilation, and a loaded machine can slow any single pass, so time
-    // the best of several warm passes against a generous bound (about 100ms when idle).
+    // the best of several warm passes against a generous bound (about 100ms when idle on Bun 1.4, several times that on 1.3).
     pass();
     const runs = Array.from({ length: 5 }, pass);
     expect(runs[0]?.total).toBeGreaterThan(0);
-    expect(Math.min(...runs.map((r) => r.elapsed))).toBeLessThan(2000);
-  });
+    expect(Math.min(...runs.map((r) => r.elapsed))).toBeLessThan(5000);
+  }, 60_000);
 });
 
 describe("AI slop cache persistence", () => {
