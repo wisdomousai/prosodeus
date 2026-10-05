@@ -47,6 +47,8 @@ describe("AI slop candidate extraction", () => {
       "utf8",
     );
     const sentences = splitAndHash(text);
+    // The first pass pays one-time regex compilation, which varies a lot between machines.
+    for (const sentence of sentences) extractAiSlopCandidates(sentence.text, "tiered");
     const t0 = performance.now();
     let total = 0;
     for (const sentence of sentences) {
