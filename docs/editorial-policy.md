@@ -1,29 +1,30 @@
 # Editorial policy
 
-Prosodeus finds structural and lexical uniformity in text and helps you fix it. It does not, and cannot, tell you who or what wrote something. Please use it that way.
+Prosodeus finds repeated phrases and repetitive sentence structure in a text and helps you revise them. It cannot tell you who or what wrote the text. Please don't use it for that.
 
 ## Why phrase-matching cannot prove authorship
 
-Every phrase on a hit list has human precedent. Language models learned these patterns from people. A formulaic essay opening is the structure writing instructors have taught for decades, so flagging it says more about the prompt's blandness than about where the prose came from.
+Models learned every phrase on the hit lists from human writing. Writing instructors have taught the formulaic essay opening for decades. When the tool flags one, it tells you the opening is bland, and nothing about where it came from.
 
-Detection tools have a poor record on exactly this question:
+Detection tools have done badly at telling human and machine text apart:
 
-- OpenAI withdrew its own AI-text classifier in July 2023 for low accuracy. At launch it correctly identified 26% of AI-written text while wrongly labelling 9% of human-written text as AI-written.
-- Liang et al. (*Patterns*, 2023) tested seven widely used GPT detectors on TOEFL essays written by non-native English speakers. On average the detectors misclassified 61.22% of them as AI-generated, while they were near-perfect on essays by US 8th graders.
-- Weber-Wulff et al. (2023) tested a range of detection tools and concluded that they were neither accurate nor reliable.
+- OpenAI withdrew its own AI-text classifier in July 2023 for low accuracy. In its launch test it caught 26% of AI-written text and flagged 9% of human-written text by mistake.
+- Liang et al. (*Patterns*, 2023) tested seven widely used GPT detectors on TOEFL essays written by non-native English speakers. On average the detectors misclassified 61.22% of them as AI-generated. On essays by US 8th graders they were close to perfect.
+- Weber-Wulff et al. (2023) tested a range of detection tools and found them inaccurate and unreliable.
 
-Prosodeus uses lexical hits and density as editing signals, which is a weaker claim than "this was generated". A false positive costs you a few seconds. A false accusation can cost someone their standing.
+Prosodeus reports phrase hits and how densely they occur, as a guide to editing. That is a much smaller claim than "a model wrote this". A student accused on the strength of a flag can lose a grade over a phrase that plenty of people write.
 
-## Who false positives land on
+## Whose writing gets flagged wrongly
 
-The patterns Prosodeus flags overlap with legitimate writing styles: non-native English writers, people writing formal academic or technical prose, writers who use grammar tools, and writers working in a genre with fixed conventions. Treat a hit on any of them as a style observation.
+The patterns overlap with several legitimate styles: writing by non-native English speakers, formal academic and technical prose, text that has been through a grammar checker, and genres with fixed conventions. A hit on any of these is a remark about style.
 
 ## What to do instead
 
-- **Edit toward specificity.** Ask what specific claim a flagged sentence is hiding and supply it. That helps every writer, whatever produced the draft.
-- **Use clusters, not single hits.** One marker means almost nothing. See the density test in [`instructions/strategies.md`](../instructions/strategies.md).
-- **Keep humans in the decision.** Never base a penalty, rejection or accusation on this tool's output. If authorship is genuinely in doubt, look at process evidence such as drafts, revision history and a conversation with the author.
-- **Do not use it to evade detectors.** Prosodeus is not a humanizer and makes no claim about any detector's verdict. Its goal is better prose.
+For each flagged sentence, find the fact it leaves out and add it; the draft gets better whether a person or a model wrote it, and you never have to decide which. The density test in [`instructions/strategies.md`](../instructions/strategies.md) tells you which paragraphs to start with.
+
+Do not base a penalty, rejection or accusation on this tool's output. If you need to know who wrote something, the drafts and revision history will tell you more, and so will the author.
+
+Prosodeus has no model of how detectors score text, so it is no help in getting past one.
 
 ## Sources
 
